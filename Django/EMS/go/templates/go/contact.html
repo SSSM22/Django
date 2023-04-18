@@ -1,0 +1,40 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{% static 'go/contact.css'%}"
+      type="text/css"
+    />
+    <title>Contact</title>
+  </head>
+  <body>
+    <div class="main">
+      <img src="{%static 'img/ems.jpg'%}" class="logo" />
+      <nav>
+        <ul>
+            <li><a href="{% url 'index'%}">Home</a></li>
+            <li><a href="{% url 'contact'%}">Contact</a></li>
+            <li><a href="{% url 'login'%}">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="contact-box">
+      <form>
+        <input type="text" class="input-field" placeholder="Your Name" />
+        <input type="email" class="input-field" placeholder="Your Email" />
+        <textarea
+          type="text"
+          class="input-field textarea-field"
+          placeholder="Your message"
+        >
+        </textarea>
+        <button type="button" class="btn">Send Message</button>
+      </form>
+    </div>
+  </body>
+</html>
